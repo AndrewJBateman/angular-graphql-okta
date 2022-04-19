@@ -1,3 +1,4 @@
+import { ProfileComponent } from './profile/profile.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {
@@ -5,7 +6,6 @@ import {
   OktaAuthModule,
   OktaCallbackComponent,
 } from '@okta/okta-angular';
-import { DataComponent } from './data/data.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
@@ -14,9 +14,14 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'data',
-    component: DataComponent,
+    path: 'profile',
+    component: ProfileComponent,
     canActivate: [OktaAuthGuard],
+  },
+  {
+    path: 'data',
+    loadChildren: () => import('./data/data.module').then(m => m.DataModule),
+    canActivate: [OktaAuthGuard]
   },
   {
     path: 'login/callback',

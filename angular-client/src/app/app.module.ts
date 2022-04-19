@@ -8,7 +8,7 @@ import { OKTA_CONFIG } from '@okta/okta-angular';
 import { OktaAuth } from '@okta/okta-auth-js';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { DataComponent } from './data/data.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const OKTA_DOMAIN = 'dev-65637828.okta.com';
 const CLIENT_ID = '0oa4p9x9mmkDStvIz5d7';
@@ -21,12 +21,17 @@ const REDIRECT_URI = `http://${HOST}${CALLBACK_PATH}`;
 const config = {
   issuer: ISSUER,
   clientId: CLIENT_ID,
-  redirectUri: REDIRECT_URI
+  redirectUri: REDIRECT_URI,
 };
 const oktaAuth = new OktaAuth(config);
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, NavbarComponent, DataComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    NavbarComponent,
+    ProfileComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [
     {
