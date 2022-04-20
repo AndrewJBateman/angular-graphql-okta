@@ -1,0 +1,33 @@
+{
+  "name": "node-server",
+  "version": "1.0.0",
+  "description": "Backend to Apollo-GraphQL client",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewJBateman/angular-graphql-okta.git"
+  },
+  "keywords": [
+    "node",
+    "okta",
+    "apollo",
+    "graphql",
+    "node"
+  ],
+  "author": "ABateman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AndrewJBateman/angular-graphql-okta/issues"
+  },
+  "homepage": "https://github.com/AndrewJBateman/angular-graphql-okta#readme",
+  "dependencies": {
+    "apollo-server": "^3.6.7",
+    "graphql": "^16.3.0",
+    "nodemon": "^2.0.15",
+    "uuid": "^8.3.2"
+  }
+}
