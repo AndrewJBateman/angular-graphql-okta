@@ -9,6 +9,8 @@ import { OktaAuth } from '@okta/okta-auth-js';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
+import { GraphQLModule } from './graphql.module';
+import { HttpClientModule } from '@angular/common/http';
 
 const OKTA_DOMAIN = 'dev-65637828.okta.com';
 const CLIENT_ID = '0oa4p9x9mmkDStvIz5d7';
@@ -32,7 +34,7 @@ const oktaAuth = new OktaAuth(config);
     NavbarComponent,
     ProfileComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, GraphQLModule, HttpClientModule],
   providers: [
     {
       provide: OKTA_CONFIG,
