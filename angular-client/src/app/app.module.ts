@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const OKTA_DOMAIN = 'dev-65637828.okta.com';
 const CLIENT_ID = '0oa4p9x9mmkDStvIz5d7';
@@ -34,7 +35,7 @@ const oktaAuth = new OktaAuth(config);
     NavbarComponent,
     ProfileComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, GraphQLModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, GraphQLModule, HttpClientModule, BrowserAnimationsModule],
   providers: [
     {
       provide: OKTA_CONFIG,
