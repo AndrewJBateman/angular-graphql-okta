@@ -1,11 +1,64 @@
-<div *ngIf="loading">
-  Loading...
-</div>
-<div *ngIf="error">
-  An error occured
-</div>
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="error">An error occured</div>
 <div *ngIf="parts">
-  <div *ngFor="let part of parts">
-    <p>{{part.id}} {{part.name}}</p>
+  <!-- <mat-form-field appearance="standard">
+    <mat-label>Filter Table</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Search" #input />
+  </mat-form-field> -->
+
+  <div class="form">
+    <mat-card>
+      <input
+        matInput
+        (keyup)="applyFilter($event)"
+        placeholder="Filter..."
+        #input
+      />
+    </mat-card>
+  </div>
+
+  <div>
+    <table
+      mat-table
+      class="mat-elevation-z8 data-table"
+      [dataSource]="dataSource"
+      aria-label="Parts"
+      matSort
+    >
+      <ng-container
+        *ngFor="let column of columns"
+        [matColumnDef]="column.columnDef"
+      >
+        <th mat-header-cell *matHeaderCellDef>{{ column.header }}</th>
+        <td mat-cell *matCellDef="let row">{{ column.cell(row) }}</td>
+      </ng-container>
+
+      <!-- CreatedDate Column -->
+      <ng-container matColumnDef="createdDate">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>CreatedDate</th>
+        <td mat-cell *matCellDef="let row">
+          <!-- {{ row.createdDate.seconds * 1000 | date: "dd-MM-yyyy" }} -->
+          {{ row.createdDate }}
+        </td>
+      </ng-container>
+
+      <!-- <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+        <td mat-cell *matCellDef="let row">{{ row.id }}</td>
+      </ng-container> -->
+
+      <!-- Name Column -->
+      <!-- <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+        <td mat-cell *matCellDef="let row">{{ row.name }}</td>
+      </ng-container> -->
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+    <mat-paginator
+      [pageSizeOptions]="[5, 10, 25, 100]"
+      aria-label="Select page of parts"
+    ></mat-paginator>
   </div>
 </div>

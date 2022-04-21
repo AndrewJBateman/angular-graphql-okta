@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { Apollo } from 'apollo-angular';
 import { PARTS_LIST } from 'src/app/graphql/graphql.queries';
+import { Part } from './models/part.model';
 
 @Component({
   selector: 'app-data',
@@ -12,6 +16,34 @@ export class DataComponent implements OnInit {
   loading = true;
   error: any;
 
+  // Material table setup
+  columns = [
+    {
+      columnDef: 'name',
+      header: 'Name',
+      cell: (part: Part) => `${part.name}`,
+    },
+    {
+      columnDef: 'quantity',
+      header: 'Qty',
+      cell: (part: Part) => `${part.quantity}`,
+    },
+    {
+      columnDef: 'weight',
+      header: 'Kg',
+      cell: (part: Part) => `${part.weight}`,
+    },
+    {
+      columnDef: 'criticalPart',
+      header: 'Critical',
+      cell: (part: Part) => `${part.criticalPart}`,
+    },
+  ];
+  displayedColumns: string[] = ['name', 'quantity', 'weight', 'criticalPart', 'createdDate'];
+  dataSource!: MatTableDataSource<Part>;
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
+
   constructor(private apollo: Apollo) {}
 
   ngOnInit(): void {
@@ -21,8 +53,18 @@ export class DataComponent implements OnInit {
       })
       .valueChanges.subscribe((result: any) => {
         this.parts = result?.data?.parts;
+        this.dataSource = new MatTableDataSource(this.parts);
         this.loading = result.loading;
         this.error = result.error;
       });
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
   }
 }

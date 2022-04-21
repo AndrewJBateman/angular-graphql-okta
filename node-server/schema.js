@@ -28,6 +28,7 @@ exports.typeDefs = gql`
 		criticalPart: Boolean!
 		category: Category!
 		fieldReviews: [FieldReview!]!
+		createdDate: String!
 	}
 	type Category {
 		id: ID!

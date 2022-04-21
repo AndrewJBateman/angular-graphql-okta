@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { DataRoutingModule } from './data-routing.module';
 import { DataComponent } from './data.component';
-
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +11,8 @@ import { DataComponent } from './data.component';
   ],
   imports: [
     CommonModule,
-    DataRoutingModule
+    DataRoutingModule,
+    MaterialModule
   ],
   exports: [DataComponent]
 })
