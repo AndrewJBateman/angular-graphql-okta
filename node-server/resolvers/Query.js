@@ -1,5 +1,14 @@
+// example resolver:
+// const resolvers = {
+//   Query: {
+//     user(parent, args, context, info) {
+//       return users.find(user => user.id === args.id);
+//     }
+//   }
+// }
+
 exports.Query = {
-	parts: (parent, { filter }, { db }) => {
+	parts: (parent, { filter }, { db }, info) => {
 		let filteredParts = db.parts;
 		if (filter) {
 			const { criticalPart, avgRating } = filter;
@@ -26,11 +35,11 @@ exports.Query = {
 		}
 		return filteredParts;
 	},
-	part: (parent, { id }, { db }) => {
+	part: (parent, { id }, { db }, info) => {
 		return db.parts.find((part) => part.id === id);
 	},
-	categories: (parent, args, { db }) => db.categories,
-	category: (parent, { id }, { db }) => {
+	categories: (parent, args, { db }, info) => db.categories,
+	category: (parent, { id }, { db }, info) => {
 		return db.categories.find((category) => category.id === id);
 	},
 };
