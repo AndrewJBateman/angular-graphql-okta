@@ -33,7 +33,6 @@
 
 ** Backend
 
-* Node.js used with Express middleware to create javascript functions
 * Apollo-server resolvers used to process GraphQL operations on database data
 * uuid creates a unique id string for each part
 
@@ -111,7 +110,7 @@ export { PARTS_LIST };
 
 ## :clap: Inspiration
 
-* [](https://morioh.com/p/ed3e227baa2e)
+* [Apollo-Angular documentation](https://apollo-angular.com/docs/development-and-testing/using-typescript)
 
 ## :file_folder: License
 
