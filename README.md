@@ -29,9 +29,9 @@
 ** Frontend
 
 * Angular frontend uses Okta for auth login/logout with [OAuth 2.0 Authorization Code with PKCE flow](https://developer.okta.com/docs/guides/implement-grant-type/authcodepkce/main/#create-the-proof-key-for-code-exchange)
-* tba
+* `Data` page displays table of database data with working filter input
 
-**Backend
+** Backend
 
 * Node.js used with Express middleware to create javascript functions
 * Apollo-server resolvers used to process GraphQL operations on database data
@@ -39,16 +39,17 @@
 
 ## :camera: Screenshots
 
-![Image](./imgs/query.png)
+![Image](./imgs/data.png)
 
 ## :signal_strength: Technologies
 
-* [Angular v13](https://angular.io/) javascript framework
+* [Angular v14](https://angular.io/) javascript framework
 * [Okta Angular SDK v3](https://github.com/okta/okta-angular)
 * [Okta CLI](https://github.com/okta/okta-cli)
 * [Okta](https://developer.okta.com/) has Authentication and User Management APIs that reduce development time with instant-on, scalable user infrastructure.
 * [GraphQL v16](https://graphql.org/) API query language
-* [Angular Material v13](https://material.angular.io/) menu toolbar & table to display data  
+* [Angular Material v14](https://material.angular.io/) menu toolbar & table to display data  
+* [Apollo Client v3](https://www.apollographql.com/docs/react/) used with [Apollo-Angular v3](https://apollo-angular.com/) GraphQL Client for Angular Framework
 
 * [Node.js v16](https://nodejs.org/) Javascript runtime using the [Chrome V8 engine](https://v8.dev/)
 * [Apollo Server v3](https://www.apollographql.com/docs/apollo-server/getting-started/) for unified data communications
@@ -56,17 +57,19 @@
 
 ## :floppy_disk: Setup
 
-** Backend
+** Frontend
 
 * `npm i` to install dependencies
 * You will need to [install the Okta CLI](https://github.com/okta/okta-cli#installation). I installed it on Windows 10 Home using the [Chocolatey package manager](https://chocolatey.org/)
 * You will need an Okta developer account then use `okta login` to integrate it with the Okta CLI.
 * In Okta apps, create a client app then add options: Type of Application: SPA, Redirect URI: `http://localhost:4200/login/callback`, Logout Redirect URI: `http://localhost:4200` (You must add these redirect URIs or login will not work)
 * Add issuer and Client-ID to `app.module.ts`
-
-** Frontend
-
 * `ng serve` runs frontend on `http://localhost:4200` with auto-restart after changes
+
+** Backend
+
+* `npm i` to install dependencies
+* `npm run dev` to start node server
 
 ## :wrench: Testing
 
@@ -98,6 +101,7 @@ export { PARTS_LIST };
 
 * Material table to display backend data
 * GraphQL use strong data types and ensures no over or under-fetching od data
+* Okta Authguard to restrict user access to certain pages
 
 ## :clipboard: Status, Testing & To-Do List
 
@@ -107,7 +111,7 @@ export { PARTS_LIST };
 
 ## :clap: Inspiration
 
-* tba
+* [](https://morioh.com/p/ed3e227baa2e)
 
 ## :file_folder: License
 
