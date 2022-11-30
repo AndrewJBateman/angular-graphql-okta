@@ -52,7 +52,7 @@
 
 * [Node.js v16](https://nodejs.org/) Javascript runtime using the [Chrome V8 engine](https://v8.dev/)
 * [Apollo Server v3](https://www.apollographql.com/docs/apollo-server/getting-started/) for unified data communications
-* [uuid v8](https://www.npmjs.com/package/uuid) to create RFC4122 UUIDs
+* [uuid v9](https://www.npmjs.com/package/uuid) to create RFC4122 UUIDs
 
 ## :floppy_disk: Setup
 
@@ -99,7 +99,7 @@ export { PARTS_LIST };
 ## :cool: Features
 
 * Material table to display backend data
-* GraphQL use strong data types and ensures no over or under-fetching od data
+* GraphQL uses strong data types and ensures no over or under-fetching od data
 * Okta Authguard to restrict user access to certain pages
 
 ## :clipboard: Status, Testing & To-Do List

@@ -7,19 +7,19 @@ const { Part } = require("./resolvers/Part");
 const { db } = require("./db");
 
 const server = new ApolloServer({
-	typeDefs,
-	resolvers: {
-		Query,
+  typeDefs,
+  resolvers: {
+    Query,
     Mutation,
-		Category,
-		Part,
-	},
-	context: {
-		db
-	},
+    Category,
+    Part,
+  },
+  context: {
+    db,
+  },
 });
 
 // server will start on 'http://localhost:4000/'
 server.listen().then(({ url }) => {
-	console.log("Server is ready at " + url);
+  console.log("Server is ready at " + url);
 });
