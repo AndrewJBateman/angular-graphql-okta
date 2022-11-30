@@ -12,9 +12,10 @@ import { ProfileComponent } from './profile/profile.component';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { environment } from "../environments/environment";
 
-const OKTA_DOMAIN = 'dev-65637828.okta.com';
-const CLIENT_ID = '0oa4p9x9mmkDStvIz5d7';
+const OKTA_DOMAIN = environment.okta.OKTA_DOMAIN;
+const CLIENT_ID = environment.okta.CLIENT_ID;
 const HOST = 'localhost:4200';
 const CALLBACK_PATH = '/login/callback';
 
