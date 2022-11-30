@@ -11,17 +11,17 @@
 ## :page_facing_up: Table of contents
 
 * [:zap: Angular GraphQL Okta](#zap-angular-graphql-okta)
-  * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
+  * [:page\_facing\_up: Table of contents](#page_facing_up-table-of-contents)
   * [:books: General info](#books-general-info)
   * [:camera: Screenshots](#camera-screenshots)
-  * [:signal_strength: Technologies](#signal_strength-technologies)
-  * [:floppy_disk: Setup](#floppy_disk-setup)
+  * [:signal\_strength: Technologies](#signal_strength-technologies)
+  * [:floppy\_disk: Setup](#floppy_disk-setup)
   * [:wrench: Testing](#wrench-testing)
   * [:computer: Code Examples](#computer-code-examples)
   * [:cool: Features](#cool-features)
-  * [:clipboard: Status, Testing & To-Do List](#clipboard-status-testing--to-do-list)
+  * [:clipboard: Status, Testing \& To-Do List](#clipboard-status-testing--to-do-list)
   * [:clap: Inspiration](#clap-inspiration)
-  * [:file_folder: License](#file_folder-license)
+  * [:file\_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
@@ -42,12 +42,12 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v14](https://angular.io/) javascript framework
-* [Okta Angular SDK v3](https://github.com/okta/okta-angular)
+* [Angular v15](https://angular.io/) javascript framework
+* [Okta Angular SDK v4](https://github.com/okta/okta-angular)
 * [Okta CLI](https://github.com/okta/okta-cli)
 * [Okta](https://developer.okta.com/) has Authentication and User Management APIs that reduce development time with instant-on, scalable user infrastructure.
 * [GraphQL v16](https://graphql.org/) API query language
-* [Angular Material v14](https://material.angular.io/) menu toolbar & table to display data  
+* [Angular Material v15](https://material.angular.io/) menu toolbar & table to display data  
 * [Apollo Client v3](https://www.apollographql.com/docs/react/) used with [Apollo-Angular v3](https://apollo-angular.com/) GraphQL Client for Angular Framework
 
 * [Node.js v16](https://nodejs.org/) Javascript runtime using the [Chrome V8 engine](https://v8.dev/)
@@ -105,7 +105,7 @@ export { PARTS_LIST };
 ## :clipboard: Status, Testing & To-Do List
 
 * Status: Working, unfinished.
-* To-Do frontend: new nav bar.
+* To-Do frontend: new nav bar & Okta access data.
 * To-Do backend: add data API-postgres? Use filter functions or remove.
 
 ## :clap: Inspiration
