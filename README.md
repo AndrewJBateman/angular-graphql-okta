@@ -50,7 +50,7 @@
 * [Angular Material v16](https://material.angular.io/) menu toolbar & table to display data  
 * [Apollo Client v3](https://www.apollographql.com/docs/react/) used with [Apollo-Angular v3](https://apollo-angular.com/) GraphQL Client for Angular Framework
 
-* [Node.js v16](https://nodejs.org/) Javascript runtime using the [Chrome V8 engine](https://v8.dev/)
+* [Node.js v18](https://nodejs.org/) Javascript runtime using the [Chrome V8 engine](https://v8.dev/
 * [Apollo Server v3](https://www.apollographql.com/docs/apollo-server/getting-started/) for unified data communications
 * [uuid v9](https://www.npmjs.com/package/uuid) to create RFC4122 UUIDs
 
