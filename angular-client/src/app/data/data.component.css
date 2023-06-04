@@ -1,4 +1,4 @@
-.mat-form-field {
+.mat-mdc-form-field {
   font-size: 14px;
 }
 
@@ -6,12 +6,12 @@ table {
   width: 100%;
 }
 
-table th.mat-header-cell {
+table th.mat-mdc-header-cell {
   color: rgb(22, 22, 207);
   padding: 8px;
 }
 
-table td.mat-cell {
+table td.mat-mdc-cell {
   color: rgb(9, 9, 82);
   padding: 8px;
 }
