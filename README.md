@@ -42,12 +42,12 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v15](https://angular.io/) javascript framework
+* [Angular v16](https://angular.io/) javascript framework
 * [Okta Angular SDK v4](https://github.com/okta/okta-angular)
 * [Okta CLI](https://github.com/okta/okta-cli)
 * [Okta](https://developer.okta.com/) has Authentication and User Management APIs that reduce development time with instant-on, scalable user infrastructure.
 * [GraphQL v16](https://graphql.org/) API query language
-* [Angular Material v15](https://material.angular.io/) menu toolbar & table to display data  
+* [Angular Material v16](https://material.angular.io/) menu toolbar & table to display data  
 * [Apollo Client v3](https://www.apollographql.com/docs/react/) used with [Apollo-Angular v3](https://apollo-angular.com/) GraphQL Client for Angular Framework
 
 * [Node.js v16](https://nodejs.org/) Javascript runtime using the [Chrome V8 engine](https://v8.dev/)
@@ -118,4 +118,4 @@ export { PARTS_LIST };
 
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: `gomezbateman@yahoo.com`
